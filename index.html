@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="CodePel">
+        <title> Heart rain Animation Example </title>
+        <!-- Style CSS -->
+        <link rel="stylesheet" href="./css/style.css">
+        <!-- Demo CSS (No need to include it into your project) -->
+        <link rel="stylesheet" href="./css/demo.css">
+        <style>
+
+            body {
+                font-family: 'Arial', sans-serif;
+                background: linear-gradient(to bottom, #ff99cc, #99ccff, #cc99ff);
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+            }
+            
+            .container {
+                text-align: center;
+                max-width: 80%;
+               /* background-color: linear-gradient(to bottom, #ff99cc, #99ccff, #cc99ff);*/
+               
+                background: #70e1f5;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #ffd194, #70e1f5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+            
+            h1 {
+                font-size: 2em;
+                color: #ff66b2; /* Pink */
+            }
+            
+            .intro {
+                font-size: 1.2em;
+                color: #3399ff; /* Blue */
+            }
+            
+            .message {
+                margin-top: 20px;
+                color: #9966cc; /* Purple */
+            }
+            
+            .image-container {
+                display: flex;
+                justify-content: space-around;
+                margin: 20px 0;
+            }
+            
+            img {
+                width: 120px;
+                height: 120px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease-in-out;
+            }
+            
+            img:hover {
+                transform: scale(1.1);
+            }
+            
+            @media (max-width: 768px) {
+                .container {
+                    max-width: 90%;
+                }
+            }
+            
+
+
+            @import url("https://fonts.googleapis.com/css?family=Raleway");
+
+:root {
+  --glow-color: hsl(186 100% 69%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.glowing-btn {
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.35em 1em;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 1em;
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+  float: left;
+  margin-right: -0.8em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0.1;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .glowing-btn{
+    font-size: 1em;
+  }
+}
+
+        </style>
+    </head>
+    <body>
+        <header class="cd__intro">
+            <div class="cd__action">
+                <!-- <a
+                    href="https://www.codepel.com/animation/falling-heart-animation-css"
+                    title="Back to download and tutorial page"
+                    class="cd__btn back">Back to Tutorial</a> -->
+                <img style="height: 100px; width:100px; border-radius: 100px"
+                    src="img.jpg" alt>
+            </div>
+            <h1>🎉 Happy Birthday🎉<br> 🎂 Kaushal! 🎂</h1>
+        </header>
+
+        <main class="cd__main">
+            <div class="cd__action">
+                <img style="height: 100px; width:100px; border-radius: 100px"
+                    src="img2.png" alt>
+            </div>
+            <div id="messages" class="message">
+                <p id="message1">Do you know who you are?</p>
+                <p id="message2" style="display: none;">You are everything to
+                    me, Kaushal.</p>
+                <p id="message3" style="display: none;">Since you came into my
+                    life, happiness has become a constant presence.</p>
+                <p id="message4" style="display: none;">You've brought light to
+                    my darkest days, and I appreciate you more than words can
+                    express.</p>
+                <p id="message5" style="display: none;">Here are some cherished
+                    moments we've shared:</p>
+                <div class="image-container" style="display: none;">
+                    <img src="image1.png" alt="Memorable Moment 1">
+                    <img src="image2.png" alt="Memorable Moment 2">
+                    <!-- Add more images as needed -->
+                </div>
+                <p id="message6" style="display: none;">Thank you for being my
+                    joy, my strength, and my everything.</p>
+                <p id="message7" style="display: none;">Never doubt your worth,
+                    for you are truly special and irreplaceable.</p>
+                <p id="message8" style="display: none;">Happy Birthday, Kaushal!</p>
+            </div>
+            <div id="buttons" class="message">
+                <button id="backButton" style="display: none;"
+                    class='glowing-btn'
+                    onclick="showNextMessage()"><span
+                        class='glowing-txt'>B<span
+                            class='faulty-letter'>A</span>CK</span></button>
+                <button id="nextButton" class='glowing-btn'
+                    onclick="showNextMessage()"><span
+                        class='glowing-txt'>N<span
+                            class='faulty-letter'>E</span>XT</span></button>
+            </div>
+        </main>
+
+        <!-- Script JS -->
+        <script src="./js/script.js"></script>
+        <!--$%analytics%$-->
+
+        <script>
+            let currentMessage = 1;
+    
+            // Show the next button initially
+            document.getElementById('nextButton').style.display = 'inline-block';
+            
+            function showNextMessage() {
+                const currentMessageElement = document.getElementById(`message${currentMessage}`);
+                if (currentMessageElement) {
+                    currentMessageElement.style.display = 'none';
+                    currentMessage++;
+                }
+            
+                const nextMessageElement = document.getElementById(`message${currentMessage}`);
+                if (nextMessageElement) {
+                    nextMessageElement.style.display = 'block';
+                } else {
+                    // Hide the next button when there are no more messages
+                    document.getElementById('nextButton').style.display = 'none';
+                }
+            
+                // Always show the back button after showing a message
+                document.getElementById('backButton').style.display = 'inline-block';
+            }
+            
+            function showPreviousMessage() {
+                if (currentMessage > 1) {
+                    const currentMessageElement = document.getElementById(`message${currentMessage}`);
+                    if (currentMessageElement) {
+                        currentMessageElement.style.display = 'none';
+                        currentMessage--;
+                    }
+            
+                    const previousMessageElement = document.getElementById(`message${currentMessage}`);
+                    if (previousMessageElement) {
+                        previousMessageElement.style.display = 'block';
+                    }
+            
+                    // Always show the next button after going back
+                    document.getElementById('nextButton').style.display = 'inline-block';
+                }
+            
+                // Hide the back button if we are at the first message
+                if (currentMessage === 1) {
+                    document.getElementById('backButton').style.display = 'none';
+                }
+            }
+            
+            
+        </script>
+    </body>
+</html>
