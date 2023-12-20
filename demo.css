@@ -35,6 +35,7 @@ body {
    padding: 60px 30px;
    margin-bottom: 1px;
    flex-direction: column;
+   height: 100vh;
 
 }
 
@@ -51,7 +52,7 @@ body {
 }
 
 .cd__intro h1 {
-   font-size: 18pt;
+   font-size: 25pt;
    padding-bottom: 15px;
 
 }
@@ -63,7 +64,7 @@ body {
 .cd__action {
    text-align: center;
    display: block;
-   margin-top: 20px;
+   margin-top: 70px;
 }
 
 .cd__action a.cd__btn {

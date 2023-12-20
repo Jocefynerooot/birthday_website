@@ -38,17 +38,17 @@
             }
             
             h1 {
-                font-size: 2em;
+                font-size: 4em;
                 color: #9c004e; /* Pink */
             }
             
             .intro {
-                font-size: 1.2em;
+                font-size: 2.2em;
                 color: #3399ff; /* Blue */
             }
             
             .message {
-                margin-top: 20px;
+                margin-top: 50px;
                 color:#0d0061; /* Purple */
             }
             
@@ -67,6 +67,9 @@
             }
             
             img:hover {
+                transform: scale(1.1);
+            }
+            .video-container:hover {
                 transform: scale(1.1);
             }
             
@@ -293,6 +296,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin: 20px;
 }
 
 .zoom-video {
@@ -303,7 +307,9 @@
     animation: zoomAnimation 10s infinite linear; /* Adjust the animation duration as needed */
 }
 
-
+p{
+    color: rgb(57, 2, 79);
+}
         </style>
     </head>
     <body>
@@ -313,7 +319,7 @@
                     href="https://www.codepel.com/animation/falling-heart-animation-css"
                     title="Back to download and tutorial page"
                     class="cd__btn back">Back to Tutorial</a> -->
-                <img style="height: 100px; width:100px; border-radius: 100px"
+                <img style="height: 200px; width:200px; border-radius: 100px"
                     src="hbImg.png" alt>
             </div>
             <h1>🎉 Happy Birthday🎉<br> 🎂 Kaushal! 🎂</h1>
@@ -370,7 +376,7 @@
                         <div class="cd__action">
                     <div class="video-container">
                         <video class="zoom-video" autoplay loop muted>
-                            <source src="walking.mp4" type="video/mp4">
+                            <source src="flyingheart.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -397,7 +403,7 @@
                     <div class="cd__action">
                     <div class="video-container">
                         <video class="zoom-video" autoplay loop muted>
-                            <source src="walking.mp4" type="video/mp4">
+                            <source src="garden.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -409,7 +415,7 @@
                 <div class="cd__action">
                 <div class="video-container">
                     <video class="zoom-video" autoplay loop muted>
-                        <source src="walking.mp4" type="video/mp4">
+                        <source src="hbvideo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -422,9 +428,7 @@
         <!--$%analytics%$-->
 
         <script>
-
-            
-            
+                      
         </script>
     </body>
 </html>
