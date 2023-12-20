@@ -6,9 +6,9 @@
         <meta name="author" content="CodePel">
         <title> Heart rain Animation Example </title>
         <!-- Style CSS -->
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="style.css">
         <!-- Demo CSS (No need to include it into your project) -->
-        <link rel="stylesheet" href="./css/demo.css">
+        <link rel="stylesheet" href="demo.css">
         <style>
 
             body {
@@ -39,7 +39,7 @@
             
             h1 {
                 font-size: 2em;
-                color: #ff66b2; /* Pink */
+                color: #9c004e; /* Pink */
             }
             
             .intro {
@@ -49,7 +49,7 @@
             
             .message {
                 margin-top: 20px;
-                color: #9966cc; /* Purple */
+                color:#0d0061; /* Purple */
             }
             
             .image-container {
@@ -286,6 +286,24 @@
   }
 }
 
+
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.zoom-video {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    object-fit: cover;
+    animation: zoomAnimation 10s infinite linear; /* Adjust the animation duration as needed */
+}
+
+
         </style>
     </head>
     <body>
@@ -296,102 +314,115 @@
                     title="Back to download and tutorial page"
                     class="cd__btn back">Back to Tutorial</a> -->
                 <img style="height: 100px; width:100px; border-radius: 100px"
-                    src="img.jpg" alt>
+                    src="hbImg.png" alt>
             </div>
             <h1>🎉 Happy Birthday🎉<br> 🎂 Kaushal! 🎂</h1>
         </header>
 
-        <main class="cd__main">
-            <div class="cd__action">
-                <img style="height: 100px; width:100px; border-radius: 100px"
-                    src="img2.png" alt>
-            </div>
+        <main class="cd__main" style="text-align: center;">
             <div id="messages" class="message">
-                <p id="message1">Do you know who you are?</p>
-                <p id="message2" style="display: none;">You are everything to
-                    me, Kaushal.</p>
-                <p id="message3" style="display: none;">Since you came into my
-                    life, happiness has become a constant presence.</p>
-                <p id="message4" style="display: none;">You've brought light to
-                    my darkest days, and I appreciate you more than words can
-                    express.</p>
-                <p id="message5" style="display: none;">Here are some cherished
-                    moments we've shared:</p>
-                <div class="image-container" style="display: none;">
-                    <img src="image1.png" alt="Memorable Moment 1">
-                    <img src="image2.png" alt="Memorable Moment 2">
-                    <!-- Add more images as needed -->
+                <div class="cd__action">
+                    <img
+                        style="height: 100px; width:100px; border-radius: 100px"
+                        src="img2.png" alt>
+                    <p id="message1">Do you know who you are?</p>
                 </div>
-                <p id="message6" style="display: none;">Thank you for being my
-                    joy, my strength, and my everything.</p>
-                <p id="message7" style="display: none;">Never doubt your worth,
-                    for you are truly special and irreplaceable.</p>
-                <p id="message8" style="display: none;">Happy Birthday, Kaushal!</p>
+
+                <div class="cd__action">
+                    <!-- <img
+                        style="height: 100px; width:100px; border-radius: 100px"
+                        src="img.jpg" alt> -->
+                        <video class="zoom-video" autoplay loop muted>
+                            <source src="heartvideo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p id="message2" style>You are everything to
+                        me, Kaushal.</p>
+                    </div>
+                    
+                    <div class="cd__action">
+                    <div class="video-container">
+                        <video class="zoom-video" autoplay loop muted>
+                            <source src="walking.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    </div>
+                    <p id="message3" style>Since you came into my
+                        life, happiness has become a constant presence.</p>
+                    </div>
+                    
+                    <div class="cd__action">
+                        <div class="video-container">
+                            <video class="zoom-video" autoplay loop muted>
+                                <source src="heartvideo2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        
+                        <p id="message4" style>You've brought light to
+                            my darkest days, and I appreciate you more than words
+                            can
+                            express.</p>
+                        </div>
+                        
+                        <div class="cd__action">
+                    <div class="video-container">
+                        <video class="zoom-video" autoplay loop muted>
+                            <source src="walking.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p id="message5" style>Never Think you're nothing, Because
+                        you are everything to someone</p>
+                    </div>
+                    
+                    <div class="image-container" style>
+                        <img src="image1.png" alt="Memorable Moment 1">
+                        <img src="image2.png" alt="Memorable Moment 2">
+                        <!-- Add more images as needed -->
+                    </div>
+                    
+                    <div class="cd__action">
+                    <div class="video-container">
+                        <video class="zoom-video" autoplay loop muted>
+                            <source src="heart3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p id="message6" style>Thank you for being my
+                        joy, my strength, and my everything.</p>
+                    </div>
+                    <div class="cd__action">
+                    <div class="video-container">
+                        <video class="zoom-video" autoplay loop muted>
+                            <source src="walking.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p id="message7" style>Never doubt your worth,
+                        for you are truly special and irreplaceable.</p>
+                        <p id="message8" style>Happy Birthday, Kaushal!</p>
+                    </div>
+                </div>
+                <div class="cd__action">
+                <div class="video-container">
+                    <video class="zoom-video" autoplay loop muted>
+                        <source src="walking.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-            <div id="buttons" class="message">
-                <button id="backButton" style="display: none;"
-                    class='glowing-btn'
-                    onclick="showNextMessage()"><span
-                        class='glowing-txt'>B<span
-                            class='faulty-letter'>A</span>CK</span></button>
-                <button id="nextButton" class='glowing-btn'
-                    onclick="showNextMessage()"><span
-                        class='glowing-txt'>N<span
-                            class='faulty-letter'>E</span>XT</span></button>
-            </div>
+
         </main>
 
         <!-- Script JS -->
-        <script src="./js/script.js"></script>
+        <script src="script.js"></script>
         <!--$%analytics%$-->
 
         <script>
-            let currentMessage = 1;
-    
-            // Show the next button initially
-            document.getElementById('nextButton').style.display = 'inline-block';
-            
-            function showNextMessage() {
-                const currentMessageElement = document.getElementById(`message${currentMessage}`);
-                if (currentMessageElement) {
-                    currentMessageElement.style.display = 'none';
-                    currentMessage++;
-                }
-            
-                const nextMessageElement = document.getElementById(`message${currentMessage}`);
-                if (nextMessageElement) {
-                    nextMessageElement.style.display = 'block';
-                } else {
-                    // Hide the next button when there are no more messages
-                    document.getElementById('nextButton').style.display = 'none';
-                }
-            
-                // Always show the back button after showing a message
-                document.getElementById('backButton').style.display = 'inline-block';
-            }
-            
-            function showPreviousMessage() {
-                if (currentMessage > 1) {
-                    const currentMessageElement = document.getElementById(`message${currentMessage}`);
-                    if (currentMessageElement) {
-                        currentMessageElement.style.display = 'none';
-                        currentMessage--;
-                    }
-            
-                    const previousMessageElement = document.getElementById(`message${currentMessage}`);
-                    if (previousMessageElement) {
-                        previousMessageElement.style.display = 'block';
-                    }
-            
-                    // Always show the next button after going back
-                    document.getElementById('nextButton').style.display = 'inline-block';
-                }
-            
-                // Hide the back button if we are at the first message
-                if (currentMessage === 1) {
-                    document.getElementById('backButton').style.display = 'none';
-                }
-            }
+
             
             
         </script>
